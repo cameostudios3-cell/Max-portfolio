@@ -4,52 +4,125 @@
     <meta charset="UTF-8">
     <title>Maxwell Kimathi Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; color: #333; }
-        h1, h2 { color: #2c3e50; }
-        .section { margin-bottom: 30px; }
-        ul { margin-left: 20px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 20px; 
+            color: #333; 
+            background-color: #f9f9f9;
+        }
+        h1 { color: #2c3e50; text-align:center; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 4px; margin-bottom: 10px; }
         a { color: #3498db; text-decoration: none; }
         a:hover { text-decoration: underline; }
+        .section { 
+            background-color: #ffffff; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        ul { margin-left: 20px; }
+        ul li { 
+            list-style-type: none; 
+            position: relative; 
+            margin-bottom: 8px; 
+        }
+        ul li::before { 
+            content: '•'; 
+            color: #3498db; 
+            position: absolute; 
+            left: -1em; 
+        }
+        .profile-pic { 
+            border-radius: 50%; 
+            display: block; 
+            margin: auto; 
+            width: 150px;
+        }
+        .cv-button { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            background-color: #3498db; 
+            color: white; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            margin-top: 10px; 
+        }
+        .flex-container { 
+            display:flex; 
+            gap:20px; 
+            flex-wrap: wrap;
+        }
+        .left-column { flex:1; min-width:250px; }
+        .right-column { flex:2; min-width:300px; }
     </style>
 </head>
 <body>
-    <img src="profile.jpg" alt="Maxwell Kimathi" width="150" style="border-radius:50%; display:block; margin:auto;">
-    <h1>Maxwell Kimathi</h1>
-    <p>Mombasa, Kenya | <a href="mailto:Kimmax080@gmail.com">Kimmax080@gmail.com</a> | LinkedIn: <a href="https://linkedin.com/in/maxwell-kimathi" target="_blank">linkedin.com/in/maxwell-kimathi</a></p>
 
+    <!-- Profile Picture -->
+    <img src="profile.jpg" alt="Maxwell Kimathi" class="profile-pic">
+
+    <!-- Name and Contact -->
+    <h1>Maxwell Kimathi</h1>
+    <p style="text-align:center;">Mombasa, Kenya | <a href="mailto:Kimmax080@gmail.com">Kimmax080@gmail.com</a> | 
+    LinkedIn: <a href="https://linkedin.com/in/maxwell-kimathi" target="_blank">linkedin.com/in/maxwell-kimathi</a></p>
+
+    <!-- CV Button -->
+    <p style="text-align:center;">
+        <a href="Maxwell_Kimathi_CV_2Column.pdf" download class="cv-button">Download CV</a>
+    </p>
+
+    <!-- About Me -->
     <div class="section">
         <h2>About Me</h2>
         <p>Remote data collection and annotation specialist with experience in household surveys, image labeling for AI, translation, and digital data support. Focused on accuracy and efficiency in remote projects.</p>
     </div>
 
-    <div class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li><b>Household Survey Data Collection – Rural Kenya:</b> Conducted structured surveys, documented responses, and ensured data quality.</li>
-            <li><b>Image Annotation for AI Training Datasets:</b> Labeled and categorized images for machine learning datasets, maintaining accuracy and consistency.</li>
-        </ul>
+    <!-- Two-Column Layout: Skills & Projects -->
+    <div class="flex-container">
+
+        <!-- Left Column: Skills & Tools -->
+        <div class="left-column section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Data Collection & Household Surveys</li>
+                <li>Data Annotation & Dataset Labeling</li>
+                <li>Survey Interviewing & Reporting</li>
+                <li>Translation (English – Swahili)</li>
+                <li>Remote Collaboration & Communication</li>
+                <li>Data Entry & Verification</li>
+            </ul>
+
+            <h2>Tools</h2>
+            <ul>
+                <li>Google Sheets</li>
+                <li>Mobile Survey Tools</li>
+                <li>Data Entry Platforms</li>
+                <li>Online Collaboration Tools (Slack, Trello, Asana)</li>
+            </ul>
+
+            <h2>Languages</h2>
+            <ul>
+                <li>English – Fluent</li>
+                <li>Swahili – Fluent</li>
+            </ul>
+        </div>
+
+        <!-- Right Column: Projects -->
+        <div class="right-column section">
+            <h2>Projects</h2>
+            <ul>
+                <li><b>Household Survey Data Collection – Rural Kenya:</b> Conducted structured surveys, documented responses, and ensured data quality.</li>
+                <li><b>Image Annotation for AI Training Datasets:</b> Labeled and categorized images for machine learning datasets, maintaining accuracy and consistency.</li>
+            </ul>
+
+            <h2>Professional Summary</h2>
+            <p>Detail-oriented remote professional with experience in data collection, household surveys, data annotation, and digital support tasks. Skilled in conducting structured interviews, organizing datasets, labeling data for AI training, and maintaining high accuracy. Comfortable working with distributed teams and meeting project deadlines.</p>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Data Collection & Household Surveys</li>
-            <li>Data Annotation & Dataset Labeling</li>
-            <li>Survey Interviewing & Reporting</li>
-            <li>Translation (English – Swahili)</li>
-            <li>Remote Collaboration & Communication</li>
-            <li>Data Entry & Verification</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Tools</h2>
-        <ul>
-            <li>Google Sheets</li>
-            <li>Mobile Survey Tools</li>
-            <li>Data Entry Platforms</li>
-            <li>Online Collaboration Tools (Slack, Trello, Asana)</li>
-        </ul>
-    </div>
 </body>
 </html>
